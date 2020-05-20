@@ -12,6 +12,10 @@ const CheckClickForm = ({ onSubmit = () => {} }) => {
     setInputs({ ...inputs, [name]: value });
   }
 
+  function submitForm() {
+    onSubmit(inputs.searchQuery, inputs.url);
+  }
+
   return (
     <form action="">
       <input
@@ -22,11 +26,12 @@ const CheckClickForm = ({ onSubmit = () => {} }) => {
         placeholder="Search query"
       />
       <input type="text" name="url" onChange={onChange} value={inputs.url} placeholder="Url" />
-      <button type="button" onClick={onSubmit}>Add</button>
+      <button type="button" onClick={submitForm}>Add</button>
     </form>
   );
 };
 
 export default CheckClickForm;
+
 
 
