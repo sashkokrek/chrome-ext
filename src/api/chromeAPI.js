@@ -11,11 +11,11 @@ export default {
      */
     getAllTasks: (cb) => chrome.storage.sync.get(['tasks'], cb),
     /**
-     * @param  {Array<{searchQuery: string, url: string, didClicked: boolean}>} items - Array with tasks in format 
+     * @param  {Array<{searchQuery: string, url: string, didClicked: boolean}>} items - Array with tasks in format
      * @param  {callback} cb - Callback on success, or on failure
      *
      * @callback cb - Callback on success, or on failure
      */
-    setTasks: (items, cb) => chrome.storage.sync.set({tasks: items}, cb),
+    setTasks: (items, cb) => chrome.storage.sync.set({ tasks: items }, cb),
   },
 };

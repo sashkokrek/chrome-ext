@@ -1,13 +1,21 @@
 import React from 'react';
+import P from 'prop-types';
+import './index.css';
 
-const Task = ({ queryString, url }) => {
+const Task = ({ queryString = '', url = '', didClicked = false }) => {
   return (
-    <div>
+    <div className="task">
       <span>{queryString} </span>
       <span>{url}</span>
+      <span>{didClicked ? 'clicked' : 'in progress'}</span>
     </div>
   );
 };
 
-export default Task;
+Task.propTypes = {
+  queryString: P.string,
+  url: P.string,
+  didClicked: P.bool,
+};
 
+export default Task;
