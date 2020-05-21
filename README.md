@@ -1,4 +1,4 @@
-Chrome Extension: Click checker.
+## Chrome Extension: Click checker.
 
 ## Installing and Running
 
